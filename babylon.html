@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+    <title>OpenVDB — Babylon.js</title>
+    <style>
+      html, body { margin: 0; overflow: hidden; overscroll-behavior: none; }
+      body { font-family: 'Baloo Tamma 2', Arial, Helvetica, sans-serif; line-height: 1.23; }
+      canvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100dvh; touch-action: none; }
+      #status {
+        position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+        display: flex; align-items: center; gap: 8px;
+        background-color: #111111; border-radius: 4px; color: #cccccc;
+        z-index: 2; padding: 8px 12px; user-select: none; pointer-events: none;
+      }
+      .bottom-tab {
+        position: fixed; display: flex; flex-wrap: wrap; row-gap: 4px;
+        bottom: 0px; left: 0px; box-sizing: border-box; width: 100%;
+        padding: 6px 4px calc(2px + env(safe-area-inset-bottom)) 4px;
+        font-size: 14px; color: #ffffff; background-color: #1f1f1f;
+        z-index: 3; border-top: solid 1px #3f3f3f;
+      }
+      .bottom-tab a { color: #ffffff; text-decoration: none; opacity: 0.8; }
+      .bottom-tab a:hover { opacity: 1.0; }
+      .bottom-tab > * { margin: 0px 8px; }
+    </style>
+    <script type="module" crossorigin src="/openvdb/assets/babylon-DOMs3XLG.js"></script>
+    <link rel="modulepreload" crossorigin href="/openvdb/assets/WVDBReader-LfaVD6Iy.js">
+  </head>
+  <body>
+    <canvas id="renderCanvas"></canvas>
+    <div id="status">Loading bunny_cloud.wvdb — please wait</div>
+    <div class="bottom-tab">
+      <div><a href="./">← Back to three.js examples</a></div>
+      <div><a href="https://doc.babylonjs.com/" target="_blank">Babylon.js Docs</a></div>
+      <div style="flex-grow: 1; text-align: right;">OpenVDB × Babylon.js</div>
+    </div>
+  </body>
+</html>
